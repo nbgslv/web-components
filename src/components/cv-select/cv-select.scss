@@ -1,0 +1,39 @@
+label {
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #000000;
+
+  &:focus {
+    border-bottom: 1px solid #79b3ff;
+  }
+
+  &:active {
+    border-bottom: 1px solid #79b3ff;
+  }
+
+  &:hover {
+    border-bottom: 1px solid #79b3ff;
+  }
+}
+
+.menu {
+  height: 0;
+
+  .open {
+    height: 2rem;
+  }
+}
+
+.option {
+  &:hover {
+    background-color: #79b3ff;
+  }
+
+  .selected {
+    background-color: #3788ff;
+  }
+}

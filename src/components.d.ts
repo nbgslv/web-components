@@ -28,6 +28,10 @@ export namespace Components {
          */
         "value": string;
     }
+    interface CvSelect {
+        "label": string;
+        "name": string;
+    }
     interface CvTextarea {
         /**
           * Label of the textarea
@@ -54,6 +58,12 @@ declare global {
         prototype: HTMLCvInputElement;
         new (): HTMLCvInputElement;
     };
+    interface HTMLCvSelectElement extends Components.CvSelect, HTMLStencilElement {
+    }
+    var HTMLCvSelectElement: {
+        prototype: HTMLCvSelectElement;
+        new (): HTMLCvSelectElement;
+    };
     interface HTMLCvTextareaElement extends Components.CvTextarea, HTMLStencilElement {
     }
     var HTMLCvTextareaElement: {
@@ -62,6 +72,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "cv-input": HTMLCvInputElement;
+        "cv-select": HTMLCvSelectElement;
         "cv-textarea": HTMLCvTextareaElement;
     }
 }
@@ -88,6 +99,10 @@ declare namespace LocalJSX {
          */
         "value"?: string;
     }
+    interface CvSelect {
+        "label"?: string;
+        "name"?: string;
+    }
     interface CvTextarea {
         /**
           * Label of the textarea
@@ -108,6 +123,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "cv-input": CvInput;
+        "cv-select": CvSelect;
         "cv-textarea": CvTextarea;
     }
 }
@@ -116,6 +132,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "cv-input": LocalJSX.CvInput & JSXBase.HTMLAttributes<HTMLCvInputElement>;
+            "cv-select": LocalJSX.CvSelect & JSXBase.HTMLAttributes<HTMLCvSelectElement>;
             "cv-textarea": LocalJSX.CvTextarea & JSXBase.HTMLAttributes<HTMLCvTextareaElement>;
         }
     }

@@ -2,7 +2,7 @@ import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'cv-input',
-  styleUrl: 'cv-input.css',
+  styleUrl: 'cv-input.scss',
   shadow: true,
 })
 export class CvInput {

@@ -2,7 +2,7 @@ import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'cv-textarea',
-  styleUrl: 'cv-textarea.css',
+  styleUrl: 'cv-textarea.scss',
   shadow: true,
 })
 
